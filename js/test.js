@@ -12,8 +12,8 @@ var zt = {
 };
 
 
-function createDiv(str,index) {
-    var $main = $('<div class="person panel panel-success"><div class="panel-heading"><h3 class="panel-title">'+str+'<span  class="close pull-right glyphicon glyphicon-remove-circle" index="'+index+'"></span></h3></div></div>');
+function createDiv(str) {
+    var $main = $('<div class="person panel panel-success"><div class="panel-heading"><h3 class="panel-title">'+str+'<span  class="close pull-right glyphicon glyphicon-remove-circle" index="'+str+'"></span></h3></div></div>');
     var $list = $("#list");
     $list.append($main);
 }
@@ -22,7 +22,7 @@ function init() {
     var l = zt.all.length;
     var i;
     for ( i = 0; i < l; i++ ) {
-        createDiv(zt.all[i],i);
+        createDiv(zt.all[i]);
     }
 }
 
@@ -64,9 +64,15 @@ function closeDiv(event) {
         alert("据说已经去掉了3个人了");
         return;
     }
-    var index = $(event.target).attr("index");
-    zt.all.splice(index,1);
-    
+    var str = $(event.target).attr('index');
+    var i;
+    var l = zt.all.length;
+    for ( i = 0; i < l; i++ ) {
+        if ( zt.all[i] === str ) {
+            break;
+        }
+    }
+    zt.all.splice(i,1);
     $(event.target).parents(".person").remove();
 }
 
