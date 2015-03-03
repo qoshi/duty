@@ -1,0 +1,12 @@
+#result {
+    display : none;
+    text-align : center;
+} 
+
+#start {
+    text-align : center;
+}
+
+#load {
+    display : none;
+}

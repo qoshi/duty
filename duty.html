@@ -1,0 +1,37 @@
+<!DOCTYPE>
+<html>
+  <head>
+    <title>谁来做值日</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="./css/bootstrap.min.css" type="text/css" media="screen" />
+    <link rel="stylesheet" href="./css/style.css" type="text/css" media="screen" />
+  </head>
+  <body>
+    <div class="jumbotron">
+      <h1>于是今天谁比较倒霉</h1>
+    </div>
+    <span  id="load" class="close pull-right glyphicon glyphicon-remove-circle"></span>
+    <div class="col-md-12">
+      <div id="start" class="col-md-offset-2 col-md-8">
+        <h3>去掉三个前三天值日的选手</h3>
+        <button type="button" id="startButton" data-loading-text="Loading..." class="btn btn-primary btn-lg" autocomplete="off">
+          start!
+        </button>
+      </div>
+      <div id="list" class="col-md-offset-2 col-md-8">
+      </div>
+      <div id="result" class="col-md-offset-2 col-md-8">
+        <div class="progress">
+          <div id="processBar" class="progress-bar progress-bar-info progress-bar-striped active"  role="progressbar" aria-valuenow="45" aria-valuemin="0" aria-valuemax="100">
+            <span class="sr-only"></span>
+          </div>
+        </div>
+        <h3 id="resultContent"></h3>
+      </div>
+    </div>
+  </body>
+  <script type="text/javascript" src="./js/jquery.js"></script>
+  <script type="text/javascript" src="./js/bootstrap.min.js"></script>
+  <script type="text/javascript" src="./js/test.js"></script>
+</html>
