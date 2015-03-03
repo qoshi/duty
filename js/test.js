@@ -40,6 +40,8 @@ function findSomeOne() {
         times += 1;
         if ( times == 31 ) {
             clearInterval(iterator);
+            $("#face").show();
+            $("#face").attr("src","./pic/"+parseInt(Math.random()*2)+".png");
         }
         while ( now == zt.all[t] ) {
             t = getOne();

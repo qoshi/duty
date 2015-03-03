@@ -3,6 +3,10 @@
     text-align : center;
 } 
 
+#face {
+    display : none;
+}
+
 #start {
     text-align : center;
 }
