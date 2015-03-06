@@ -9,7 +9,7 @@ var zt = {
         "张天师",
         "艾得闻",
     ],
-    times : 1,
+    times : 30,
     picl : 16
 };
 
