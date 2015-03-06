@@ -1,7 +1,11 @@
 #result {
     display : none;
     text-align : center;
-} 
+}
+
+#banner {
+    text-align : center;
+}
 
 #face {
     display : none;

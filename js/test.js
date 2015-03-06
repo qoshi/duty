@@ -8,7 +8,9 @@ var zt = {
         "死猫",
         "张天师",
         "艾得闻",
-    ]
+    ],
+    times : 1,
+    picl : 16
 };
 
 
@@ -38,17 +40,17 @@ function findSomeOne() {
         var t = getOne();
         var result;
         times += 1;
-        if ( times == 31 ) {
+        if ( times == zt.times ) {
             clearInterval(iterator);
             $("#face").show();
-            $("#face").attr("src","./pic/"+parseInt(Math.random()*2)+".png");
+            $("#face").attr("src","./pic/"+parseInt(Math.random()*zt.picl)+".png");
         }
         while ( now == zt.all[t] ) {
             t = getOne();
         }
         now = zt.all[t];
         $("#resultContent").html(now);
-        $process.css("width",(times/30*100)+"%")
+        $process.css("width",(times/zt.times*100)+"%")
     },100);
 }
 
